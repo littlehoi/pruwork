@@ -1,0 +1,11 @@
+com\pru\hk\ap\ws\bean\Scene.class
+com\pru\hk\ap\ws\bean\Award.class
+com\pru\hk\ap\util\ThreadLocalRandom.class
+com\pru\hk\ap\ws\bean\User.class
+com\pru\hk\ap\util\Util.class
+com\pru\hk\ap\ws\bean\Order.class
+com\pru\hk\ap\ws\bean\Rank.class
+com\pru\hk\ap\ws\OrderResource.class
+com\pru\hk\ap\ws\UserResource.class
+com\pru\hk\ap\ws\ApplicationConfig.class
+com\pru\hk\ap\ws\bean\World.class
