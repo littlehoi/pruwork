@@ -29,7 +29,6 @@ public class UserResource {
     }
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public List<User> getAll() { 
     return allUsers;
   }
@@ -37,7 +36,6 @@ public class UserResource {
   @GET
   @Path("{oid}")
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public User getUser(@PathParam("oid")int id) {
     return allUsers.get(id);
   }
@@ -45,7 +43,6 @@ public class UserResource {
 
   @POST
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public User sayPlainTextHello(User inputUser) throws Exception {
 
 	    //String input = (String) inputJsonObj.get("input");
