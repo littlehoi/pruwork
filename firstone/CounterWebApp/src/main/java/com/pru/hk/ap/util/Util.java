@@ -33,7 +33,6 @@ public class Util {
 		StringBuilder sb = new StringBuilder();
 		for (int j = 0; j < 5; j++)
 		    sb.append(alphNum[rnd.nextInt(alphNum.length)]);
-		sb.append("\n");
 		String string = sb.toString();
 
 		System.out.println(string);
