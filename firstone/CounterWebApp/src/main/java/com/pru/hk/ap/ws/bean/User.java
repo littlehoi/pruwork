@@ -77,6 +77,12 @@ public class User {
 	public void setScene(Scene scene) {
 		this.scene = scene;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", pass=" + pass
+				+ ", rank=" + rank + ", world=" + world + ", scene=" + scene
+				+ "]";
+	}
 	
 
 }
