@@ -13,15 +13,18 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.pru.hk.ap.util.Util;
+import com.pru.hk.ap.ws.bean.Tank;
 import com.pru.hk.ap.ws.bean.User;
 
 public class ProcessFlowTest {
-	String us = "http://localhost:8080/CounterWebApp/webresources/users/";
+	String cws = "http://localhost:8080/CounterWebApp/webresources/";
+	String userURL = cws+"users/";
+	String tankURL = cws+"tanks/";
 
 	@Test
 	public void consumeUser() {
 		 try{
-			 	URL url = new URL(us+Util.randint(1,5));
+			 	URL url = new URL(userURL+Util.randint(1,5));
 		        URLConnection yc = url.openConnection();
 			 	 BufferedReader in = new BufferedReader(new InputStreamReader(
                          yc.getInputStream()));
@@ -37,7 +40,7 @@ public class ProcessFlowTest {
 	@Test
 	public void consumeUsers() {
 		try {
-			URL url = new URL(us);
+			URL url = new URL(userURL);
 			URLConnection yc = url.openConnection();
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					yc.getInputStream()));
@@ -51,4 +54,20 @@ public class ProcessFlowTest {
 
 	}
 
+	@Test
+	public void consumeTanks() {
+		try {
+			URL url = new URL(tankURL);
+			URLConnection yc = url.openConnection();
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					yc.getInputStream()));
+			Gson gson = new GsonBuilder().create();
+			 List<Tank> uList = gson.fromJson(in, new TypeToken<ArrayList<Tank>>(){}.getType());
+			System.out.println(uList);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 }

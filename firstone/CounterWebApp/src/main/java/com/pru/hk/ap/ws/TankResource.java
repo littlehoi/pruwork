@@ -30,7 +30,6 @@ public class TankResource extends UserResource{
   @GET
   @Path("{oid}")
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public Tank getTank(@PathParam("oid")int id) {
     return allTanks.get(id);
   }
@@ -38,7 +37,6 @@ public class TankResource extends UserResource{
 
   @POST
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public Tank savePlainTextHello(Tank inputTank) throws Exception {
 
 	    //String input = (String) inputJsonObj.get("input");
